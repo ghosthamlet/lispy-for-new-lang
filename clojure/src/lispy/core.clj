@@ -22,6 +22,7 @@
   (flush)
   (read-line))
 
+;;;;;;;
 
 (def sym str)
 (def Symbol String)
@@ -95,11 +96,11 @@
            "min"      min
            "not"      not
            "null?"    #(zero? (count %)) ;; lambda x  x == []
-           "number?"  number? ;; lambda x  isinstance(x, Number),   
+           "number?"  number?
            "procedure?"  fn?
            "round"    #(Math/round %)        
-           ;; lambda x  isinstance(x, Symbol)
-           "symbol?"  #(= Symbol (class %)))))
+           "symbol?"  #(= Symbol (class %))
+           "time"     #(time %))))
 
 (defn env- 
   ([] (env- [] [] nil))
