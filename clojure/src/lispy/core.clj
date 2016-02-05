@@ -63,7 +63,7 @@
     (Integer/parseInt token)
     (catch NumberFormatException _
       (try 
-        (Integer/parseInt token)
+        (Float/parseFloat token)
         (catch NumberFormatException _
           (sym token))))))
 

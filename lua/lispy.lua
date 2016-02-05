@@ -12,15 +12,15 @@ function prn(t)
 end
 
 function split(s, sep)
-        if sep == nil then
-                sep = "%s"
-        end
-        local t={} ; i=1
-        for str in string.gmatch(s, "([^"..sep.."]+)") do
-                t[i] = str
-                i = i + 1
-        end
-        return t
+    if sep == nil then
+        sep = "%s"
+    end
+    local t={} ; i=1
+    for str in string.gmatch(s, "([^"..sep.."]+)") do
+        t[i] = str
+        i = i + 1
+    end
+    return t
 end
 
 function zip(ks, vs)
